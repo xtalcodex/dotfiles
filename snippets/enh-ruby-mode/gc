@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gc
+# key: gc
+# --
+gets.chomp

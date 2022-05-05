@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: infi
+# key: infi
+# --
+Float::INFINITY

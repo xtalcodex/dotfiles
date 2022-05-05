@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gi
+# key: gi
+# --
+gets.to_i

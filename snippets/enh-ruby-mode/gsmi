@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: gsmi
+# key: gsmi
+# --
+gets.split.map(&:to_i)

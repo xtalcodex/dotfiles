@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: arrn
+# key: arrn
+# --
+Array.new($0)

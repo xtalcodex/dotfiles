@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: bm
+# key: bm
+# --
+require 'benchmark/ips'
+
+Benchmark.ips do
+  _1.report('$0') do
+  end
+end
