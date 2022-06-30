@@ -14,13 +14,18 @@
       load-prefer-newer t
       make-backup-files nil
       ring-bell-function 'ignore)
-(setq-default flycheck-disabled-checkers '(c/c++-clang)
+
+(setq-default c-basic-offset 4
+              display-fill-column-indicator-column 100
+              flycheck-disabled-checkers '(c/c++-clang)
+              flycheck-gcc-language-standard "gnu11"
               indent-tabs-mode nil)
 
 (delete-selection-mode t)
 (electric-pair-mode 1)
+(global-display-fill-column-indicator-mode)
 (global-display-line-numbers-mode)
-(load-theme 'modus-vivendi)
+(load-theme 'wombat)
 (menu-bar-mode 0)
 (set-language-environment 'English)
 

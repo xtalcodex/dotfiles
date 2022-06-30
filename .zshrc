@@ -1,10 +1,10 @@
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=10000
+SAVEHIST=10000
 
 alias cp='cp -i'
 alias d='docker'
 alias e='emacsclient -nw'
-alias gcc='gcc-11'
+alias gcc-11='gcc-11 -std=gnu11 -O2 -lm'
 alias h='history -i 1'
 alias k='kubectl'
 alias ke='emacsclient -e "(kill-emacs)"'

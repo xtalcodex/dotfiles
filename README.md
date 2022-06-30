@@ -4,8 +4,7 @@ My dotfiles
 ## Setup
 
 ``` shell
-$ git clone git@github.com:xtalcodex/dotfiles.git
-
+$ cd
 $ ln -s ~/dotfiles/.tmux.conf
 $ ln -s ~/dotfiles/.zprofile
 $ ln -s ~/dotfiles/.zshenv
@@ -16,7 +15,6 @@ $ cd ~/.emacs.d
 $ ln -s ~/dotfiles/init.el
 $ ln -s ~/dotfiles/snippets
 
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 $ brew bundle --no-lock
 ```
 
@@ -42,8 +40,8 @@ $ gpgconf --reload gpg-agent
 ## ClamAV
 
 ``` shell
-$ emacs /otp/homevrew/etc/clamav/freshclam.conf
-$ emacs /otp/homevrew/etc/clamav/clamd.conf
+$ emacs /opt/homevrew/etc/clamav/freshclam.conf
+$ emacs /opt/homevrew/etc/clamav/clamd.conf
 $ freshclam
 ```
 
