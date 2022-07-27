@@ -21,16 +21,24 @@
               flycheck-gcc-language-standard "gnu11"
               indent-tabs-mode nil)
 
+(bind-key "C-h" 'delete-backward-char)
+(bind-key "C-x ;" 'comment-line)
+
 (delete-selection-mode t)
 (electric-pair-mode 1)
-(global-display-fill-column-indicator-mode)
 (global-display-line-numbers-mode)
 (load-theme 'wombat)
 (menu-bar-mode 0)
 (set-language-environment 'English)
 
-(bind-key "C-h" 'delete-backward-char)
-(bind-key "C-x ;" 'comment-line)
+(add-hook 'prog-mode-hook
+          (lambda () (display-fill-column-indicator-mode)))
+
+(add-hook 'c-mode-hook
+          (lambda () (c-set-style "K&R")))
+
+(add-hook 'enh-ruby-mode-hook
+          (lambda () (setq display-fill-column-indicator-column 120)))
 
 (use-package add-node-modules-path
   :ensure t
@@ -85,13 +93,18 @@
 
 (use-package enh-ruby-mode
   :ensure t
-  :mode "\\(?:\\.rb\\|.ru\\|\\(?:Gem\\|Rake\\|Brew\\)file\\)\\'")
+  :mode "\\(?:\\.rb\\|.ru\\|.rake\\|\\(?:Gem\\|Rake\\|Brew\\)file\\)\\'")
 
 (use-package flycheck
   :config
   (global-flycheck-mode)
   :custom
   (flycheck-idle-change-delay 1)
+  :ensure t)
+
+(use-package git-gutter
+  :config
+  (global-git-gutter-mode t)
   :ensure t)
 
 (use-package ivy

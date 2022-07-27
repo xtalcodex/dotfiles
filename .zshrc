@@ -1,3 +1,7 @@
+autoload -Uz promptinit
+promptinit
+prompt adam1 green green green
+
 HISTSIZE=10000
 SAVEHIST=10000
 
