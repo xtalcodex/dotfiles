@@ -34,9 +34,6 @@
 (add-hook 'prog-mode-hook
           (lambda () (display-fill-column-indicator-mode)))
 
-(add-hook 'c-mode-hook
-          (lambda () (c-set-style "K&R")))
-
 (add-hook 'enh-ruby-mode-hook
           (lambda () (setq display-fill-column-indicator-column 120)))
 
